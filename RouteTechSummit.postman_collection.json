@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "8d2b8144-154e-48b0-995d-ec23f03971ec",
+		"name": "RouteTechSummit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31493845"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"roro\",\r\n    \"email\":\"roro@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/signUp"
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"roro@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/signIn"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ybyIsImlkIjoiNjY5N2IzOGM4ZTBmOWZlZTg4NjkwNmFhIiwiaWF0IjoxNzIxMjE5MDA5fQ.PEHq683ChkhPKPma7joZT_A6rm7gbYu5JL4H-jawCIk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category 3 roro\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/category/addCategory"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ybyIsImlkIjoiNjY5Njg5OTZhMmFhMDQxOWU1M2VjZjFiIiwiaWF0IjoxNzIxMTQ3NDUxfQ.pG0RTFYpxdvmByRbs5VCphu74-YKFK3un1P_9-dkYAk",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/category/getAllCategories"
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/category/getCategoryById/6697b3db8e0f9fee886906b4"
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoia29rbyIsImlkIjoiNjY5N2IzODI4ZTBmOWZlZTg4NjkwNmE2IiwiaWF0IjoxNzIxMjE5MjgxfQ.Nyier9qzjK_LIfhafTDSOOD6k_CCOHfD9X7Re3fUHsI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category 2 koko updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/category/updateCategory/6697b7e225d8772b84a18d53"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ybyIsImlkIjoiNjY5N2IzOGM4ZTBmOWZlZTg4NjkwNmFhIiwiaWF0IjoxNzIxMjIwMjM5fQ.ZKcN_OHWmC2kTVGehKdJvdWTiIK4oPVZnhcpXXzNCf8"
+							}
+						],
+						"url": "http://localhost:3000/category/deleteCategory/6697b3db8e0f9fee886906b4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "addTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ybyIsImlkIjoiNjY5N2IzOGM4ZTBmOWZlZTg4NjkwNmFhIiwiaWF0IjoxNzIxMjIxMDExfQ.VACaj-UFQnWVJJvwCub9u-P-LLD_ZJQybBqaLDupZPA"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"task 1 roro cat2\",\r\n    \"type\":\"text\",\r\n    \"body\":\"body 1\",\r\n    \"shared\":false,\r\n    \"category\":\"6697b81925d8772b84a18d67\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/task/addTask"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/task/getAllTasks"
+					},
+					"response": []
+				},
+				{
+					"name": "getTaskById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ybyIsImlkIjoiNjY5N2IzOGM4ZTBmOWZlZTg4NjkwNmFhIiwiaWF0IjoxNzIxMjIyMDIzfQ.vho5kwLHTwf_N_bGT_9GEmMyop9gcUVMndZOnjt2Vj8"
+							}
+						],
+						"url": "http://localhost:3000/task/getTaskById/6697be8888413cf4a7b4efc7"
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ybyIsImlkIjoiNjY5Njg5OTZhMmFhMDQxOWU1M2VjZjFiIiwiaWF0IjoxNzIxMjE2MDI2fQ.JlpSm-kz2Zc3-Bh8dWUzvbgDJYquy3zpVNJUOzJZyzM"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"task 2 updated\",\r\n    \"type\":\"listt\",\r\n    \"body\":\"body 2\",\r\n    \"shared\":false,\r\n    \"category\":\"66969f8dac6f61d09568fd81\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/task/updateTask/6696d26fb58f7bde2278df9e"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ybyIsImlkIjoiNjY5N2IzOGM4ZTBmOWZlZTg4NjkwNmFhIiwiaWF0IjoxNzIxMjIzNDE2fQ.sxCPlsxWBMOf6K0bNQzb_d_xjCaK8TCSOM7DVGimFkg"
+							}
+						],
+						"url": "http://localhost:3000/task/deleteTask/6697c026c65f2053ff82cde2"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
